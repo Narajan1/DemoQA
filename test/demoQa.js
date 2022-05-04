@@ -10,7 +10,7 @@ describe("Add new user", function () {
 
     let driver; 
 
-    before('Initialize the driver', async function () {
+    beforeEach('Initialize the driver', async function () {
         
         driver = await new Builder().forBrowser("chrome").build();
         await driver.get('https://demoqa.com/text-box');
@@ -18,7 +18,7 @@ describe("Add new user", function () {
         await driver.manage().setTimeouts( { implicit: 10000 } );
     });
 
-    after('optional description', async function () {
+    afterEach('optional description', async function () {
         await driver.quit();
     });
 
@@ -26,9 +26,7 @@ describe("Add new user", function () {
     it("Check Url", async function () {
 
         //Get currentUrl
-        let currentUrl = await driver.getCurrentUrl().then(function (value) {
-            return value;
-        });
+        let currentUrl = await driver.getCurrentUrl();
 
         //Assert url
         currentUrl.should.equal("https://demoqa.com/text-box");
