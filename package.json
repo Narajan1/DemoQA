@@ -1,0 +1,19 @@
+{
+  "name": "seleniumsimpletest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --no-timeouts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "chromedriver": "^100.0.0",
+    "Math": "^0.0.1-security",
+    "mathjs": "^10.5.1",
+    "mocha": "^10.0.0",
+    "selenium-webdriver": "^4.1.2"
+  }
+}
